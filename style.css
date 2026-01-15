@@ -158,3 +158,11 @@ footer {
 .product {
   animation: popUp 0.8s ease forwards;
 }
+.product img {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto 15px auto;
+  border-radius: 12px;
+}
