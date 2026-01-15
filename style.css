@@ -94,11 +94,7 @@ body {
   transform: translateY(-10px) scale(1.03);
 }
 
-.product img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
+
 
 .product h2 {
   font-size: 20px;
@@ -161,8 +157,10 @@ footer {
 .product img {
   display: block;
   width: 100%;
-  max-width: 220px;
-  height: auto;
+  max-width: 260px;
+  height: 260px;
+  object-fit: contain;
   margin: 0 auto 15px auto;
   border-radius: 12px;
 }
+
