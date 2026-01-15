@@ -52,4 +52,96 @@ footer {
   padding: 15px;
   font-size: 12px;
   color: #94a3b8;
+
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #cfd8dc;
+  font-size: 15px;
+}
+
+/* Products section */
+.products {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Product card */
+.product {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 25px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Image */
+.product img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* Title */
+.product h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.product p {
+  font-size: 14px;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+/* Buy button */
+.product a {
+  display: inline-block;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 114, 255, 0.6);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 13px;
+  color: #b0bec5;
 }
