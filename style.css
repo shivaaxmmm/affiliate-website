@@ -155,3 +155,6 @@ footer {
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+.product {
+  animation: popUp 0.8s ease forwards;
+}
