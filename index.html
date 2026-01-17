@@ -36,9 +36,7 @@
 
 
   
-    style="padding:10px 22px; border:none; border-radius:20px; background:#e91e63; color:white; font-weight:600;">
-    👩 Female
-  </button>
+    
 </div>
 
   <section class="products" id="products">
@@ -100,20 +98,20 @@ function showSection(section){
   document.getElementById(section).style.display = 'block';
   document.getElementById(section).scrollIntoView({behavior:'smooth'});
 }
-</script>
-function filterProducts(gender){
+<script>
+function filterProducts(gender) {
   const products = document.querySelectorAll('.product-card');
 
   products.forEach(product => {
     const type = product.getAttribute('data-gender');
 
-    if(gender === 'all'){
-      product.style.display = '';
-    }
-    else if(type === gender || type === 'unisex'){
-      product.style.display = '';
-    }
-    else{
+    if (gender === 'all') {
+      product.style.display = 'block';
+    } 
+    else if (type === gender) {
+      product.style.display = 'block';
+    } 
+    else {
       product.style.display = 'none';
     }
   });
@@ -123,11 +121,10 @@ function filterProducts(gender){
 </body>
 </html>
 
-</body>
 
-</html> 
-<!-- commit -->
+
   
+
 
 
 
