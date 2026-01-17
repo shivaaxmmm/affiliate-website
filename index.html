@@ -12,7 +12,27 @@
     <h1>🔥 Smart Deals</h1>
     <p>Best Prices • Trending Products • Trusted Amazon Links</p>
     <a href="#products" class="shop-btn">Shop Now</a>
+  </div><!-- GENDER BUTTONS -->
+<div class="gender-buttons">
+  <button onclick="showSection('male')">👨 Male</button>
+  <button onclick="showSection('female')">👩 Female</button>
+</div>
+
+<!-- MALE SECTION -->
+<div id="male" class="product-section">
+  <h2>👨 Men Deals</h2>
+  <div class="grid">
+    <!-- MEN PRODUCTS -->
   </div>
+</div>
+
+<!-- FEMALE SECTION -->
+<div id="female" class="product-section" style="display:none;">
+  <h2>👩 Women Deals</h2>
+  <div class="grid">
+    <!-- WOMEN PRODUCTS -->
+  </div>
+</div>
 </header>
   <div style="display:flex; justify-content:center; gap:15px; margin:25px 0;">
   <button onclick="showSection('male')"
@@ -76,11 +96,24 @@
 
   <footer style="margin-top:40px; padding:15px 0; text-align:center; font-size:14px; color:gray;">
   Disclaimer: As an Amazon Associate, I earn from qualifying purchases.
-</footer>
+  </footer>
+
+<script>
+function showSection(section){
+  document.getElementById('male').style.display = 'none';
+  document.getElementById('female').style.display = 'none';
+  document.getElementById(section).style.display = 'block';
+  document.getElementById(section).scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
 
 </body>
 
 </html>
+
 
 
 
