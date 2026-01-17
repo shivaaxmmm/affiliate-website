@@ -12,82 +12,64 @@
     <h1>🔥 Smart Deals</h1>
     <p>Best Prices • Trending Products • Trusted Amazon Links</p>
     <a href="#products" class="shop-btn">Shop Now</a>
-  </div><!-- GENDER BUTTONS -->
-<div class="gender-buttons">
-  <button onclick="showSection('male')">👨 Male</button>
-  <button onclick="showSection('female')">👩 Female</button>
-</div>
-
-<!-- MALE SECTION -->
-<div id="male" class="product-section">
-  <h2>👨 Men Deals</h2>
-  <div class="grid">
-    <!-- MEN PRODUCT -->
-<div class="product-card">
-  <img src="MEN_IMAGE_URL" alt="Men Product">
-  <h3>Men Oversized T-Shirt</h3>
-  <p>Comfortable cotton t-shirt for daily wear</p>
-  <a href="MEN_AFFILIATE_LINK" class="buy-btn">Buy Now</a>
-</div>
-  </div>
-</div>
-
-<!-- FEMALE SECTION -->
-<div id="female" class="product-section" style="display:none;">
-  <h2>👩 Women Deals</h2>
-  <div class="grid">
-    <!-- FEMALE PRODUCT -->
-<div class="product-card">
-  <img src="WOMEN_IMAGE_URL" alt="Women Product">
-  <h3>Women Elegant Kurti</h3>
-  <p>Comfortable & stylish kurti for daily and festive wear</p>
-  <a href="WOMEN_AFFILIATE_LINK" class="buy-btn">Buy Now</a>
-</div>
-  </div>
-</div>
-</header>
-  <div style="display:flex; justify-content:center; gap:15px; margin:25px 0;">
-  <button onclick="showSection('male')"
+  </div><!-- GENDER BUTTONS --><!-- GENDER FILTER BUTTONS -->
+<div style="display:flex; justify-content:center; gap:15px; margin:25px 0;">
+  <button onclick="filterProducts('male')"
     style="padding:10px 22px; border:none; border-radius:20px; background:#2196f3; color:white; font-weight:600;">
     👨 Male
   </button>
 
-  <button onclick="showSection('female')"
+  <button onclick="filterProducts('female')"
+    style="padding:10px 22px; border:none; border-radius:20px; background:#e91e63; color:white; font-weight:600;">
+    👩 Female
+  </button>
+
+  <button onclick="filterProducts('all')"
+    style="padding:10px 22px; border:none; border-radius:20px; background:#555; color:white; font-weight:600;">
+    ✨ All
+  </button>
+</div>
+
+
+</header>
+
+
+  
     style="padding:10px 22px; border:none; border-radius:20px; background:#e91e63; color:white; font-weight:600;">
     👩 Female
   </button>
 </div>
 
   <section class="products" id="products">
-<div class="product">
+<div class="product product-card" data-gender="male">
   <img src="https://m.media-amazon.com/images/I/51f69GQr1UL._SY879_.jpg" alt="Men Oversized T-Shirt">
   <h2>Men Oversized Cotton T-Shirt</h2>
   <p>Premium quality cotton t-shirt with a relaxed oversized fit. Comfortable for daily wear.</p>
   <a href="https://amzn.to/3Noahra" target="_blank">Buy Now</a>
 </div>
 
-<div class="product">
+<div class="product product-card" data-gender="male">
   <img src="https://m.media-amazon.com/images/I/31gw+yKX-DL.jpg" alt="Men Trousers">
   <h2>Men Slim Fit Trousers</h2>
   <p>Stylish slim-fit trousers made from breathable fabric. Suitable for office and casual wear.</p>
   <a href="https://amzn.to/49Idp8I" target="_blank">Buy Now</a>
 </div>
 
-<div class="product">
+<div class="product product-card" data-gender="female">
   <img src="https://m.media-amazon.com/images/I/61EZVWl-DRL._SY741_.jpg" alt="Women Kurti">
   <h2>Women Elegant Kurti</h2>
   <p>Beautifully designed kurti with comfortable fabric. Ideal for daily and festive wear.</p>
   <a href="https://amzn.to/49LmSMN" target="_blank">Buy Now</a>
 </div>
 
-<div class="product">
+<div class="product product-card" data-gender="male">
   <img src="https://m.media-amazon.com/images/I/41728tmoQmL._SY879_.jpg" alt="Women Jeans">
   <h2> Mens Bell Bottom Jeans</h2>
   <p>Trendy bell-bottom jeans with a flattering fit. Perfect for modern casual styling.</p>
   <a href="https://amzn.to/49XxskN" target="_blank">Buy Now</a>
 </div>
 
-<div class="product">
+<div class="product product-card" data-gender="male">
   <img src="https://m.media-amazon.com/images/I/51l2Z1E0OoL._SX679_.jpg" alt="Stylish Watch">
   <h2>Stylish Analog Watch</h2>
   <p>Premium design analog watch suitable for both men and women.</p>
@@ -95,7 +77,7 @@
 </div>
   
 
-    <div class="product">
+    <div class="product product-card" data-gender="male">
       <img src="https://m.media-amazon.com/images/I/41KDHCYmNOL._SY300_SX300_QL70_FMwebp_.jpg" alt="Oversized T-Shirt">
       <h2>Mens Premium Perfume</h2>
     <p>Long-lasting men’s perfume with a fresh, bold fragrance. Perfect for daily and party wear.</p>
@@ -118,6 +100,24 @@ function showSection(section){
   document.getElementById(section).scrollIntoView({behavior:'smooth'});
 }
 </script>
+function filterProducts(gender){
+  const products = document.querySelectorAll('.product-card');
+
+  products.forEach(product => {
+    const type = product.getAttribute('data-gender');
+
+    if(gender === 'all'){
+      product.style.display = '';
+    }
+    else if(type === gender || type === 'unisex'){
+      product.style.display = '';
+    }
+    else{
+      product.style.display = 'none';
+    }
+  });
+}
+</script>
 
 </body>
 </html>
@@ -125,6 +125,7 @@ function showSection(section){
 </body>
 
 </html>
+
 
 
 
