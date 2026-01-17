@@ -14,13 +14,16 @@
     <a href="#products" class="shop-btn">Shop Now</a>
   </div>
 </header>
-  <div class="categories">
-  <span>Men</span>
-  <span>Women</span>
-  <span>Kurtis</span>
-  <span>Trousers</span>
-  <span>Jeans</span>
-  <span>Accessories</span>
+  <div style="display:flex; justify-content:center; gap:15px; margin:25px 0;">
+  <button onclick="showSection('male')"
+    style="padding:10px 22px; border:none; border-radius:20px; background:#2196f3; color:white; font-weight:600;">
+    👨 Male
+  </button>
+
+  <button onclick="showSection('female')"
+    style="padding:10px 22px; border:none; border-radius:20px; background:#e91e63; color:white; font-weight:600;">
+    👩 Female
+  </button>
 </div>
 
   <section class="products" id="products">
@@ -78,6 +81,7 @@
 </body>
 
 </html>
+
 
 
 
